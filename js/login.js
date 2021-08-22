@@ -14,18 +14,21 @@ function Verificar() {
     if (user.value.trim() === "" || password.value.trim() === "") {
 
         usuario.classList.add("Invalid");
+        contrasena.classList.add("Invalid");
 
-        mensaje.innerHTML = "Dato requerido";
+        mensaje.innerHTML = "Datos requeridos";
         mensaje.classList.add("Invalid");
 
-        contrasena.classList.add("Invalid");
     }else {
 
         usuario.classList.remove("Invalid");
         contrasena.classList.remove("Invalid");
 
         usuario.classList.add ("Valid");
+        contrasena.classList.add ("Valid");
+        
         Usuario.nombre = user.value;
+        Usuario.contrasena = password.value;
         Usuario.estado = "Conectado";
 
         mensaje.classList.remove("Invalid");
@@ -35,7 +38,6 @@ function Verificar() {
         localStorage.setItem('Usuario', JSON.stringify(Usuario));
         sessionStorage.setItem('Usuario', JSON.stringify(Usuario));
 
-        contrasena.classList.add ("Valid")
         location.href="index.html";
     }
 }
