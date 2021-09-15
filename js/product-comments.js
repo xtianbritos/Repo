@@ -5,9 +5,9 @@ function score(number) {
     let stars ="";
     for(let i=1; i<=5; i++) {
         if(i<=number) {
-            stars += '<span class="fa fa-star checked"></span>';
+            stars += '<label class="fa fa-star checked"></label>';
         }else {
-            stars +='<span class="fa fa-star"></span>';
+            stars +='<span class="fa fa-star" style="color:#c1b8b8"></span>';
         }
     }
     return stars;
@@ -21,7 +21,7 @@ function showProductComments(array){
         let comments = array[i];
 
         htmlContentToAppend += `
-                  <div class="list-group-item list-group-item-action">
+                  <div class="list-group-item">
                       <div class="row">
                           <div class="col">
                               <div class="d-flex w-100 justify-content-between">
