@@ -151,13 +151,17 @@ a.custom-card:hover {
 
     .puntuacion {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: inline-block;
     }
 
     .puntuacion input {
     position: absolute;
     top: -100px;
+    }
+
+    input.star {
+      display: none;
     }
 
 
@@ -167,7 +171,11 @@ a.custom-card:hover {
     font-size: 30px; 
     }
 
-    .puntuacion label:hover,
+    .puntuacion label:hover {
+      color: orange;
+      transform:scale(1.2);
+    }
+
     .puntuacion label:hover ~ label,
     .puntuacion input:checked ~ label {
     color:orange;
