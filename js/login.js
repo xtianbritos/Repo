@@ -2,6 +2,13 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+    if (JSON.parse(localStorage.getItem("Usuario") !== null)) {
+        location.href = "index.html";
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function(e){
 
 });
 

@@ -22,12 +22,22 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a id="userLog" class="py-2 d-none d-md-inline-block" href="my-profile.html"></a>
-      <button class="btn btn-primary" type="button" onclick="Desconectar()"> Desconectar </button>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" id="userLog" onclick="location.href='my-profile.html';"></button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"onclick="Desconectar()"> Desconectar</a>
+        </div>
+        
+      </div>
     </div>
   </nav>
-
 
   <main role="main">
     <div class="container mt-5">
@@ -61,11 +71,11 @@
           </div>
         </dd>
       </dl>
+      <hr class="my-3">
     </div>
-  </main>
 
 
-  <div class="container mt-5">
+  <div class="container">
     <div class="text-center p-4">
       <h2>Comentarios</h2>
     </div>
@@ -75,14 +85,12 @@
   </div>
 
   
-
   <div class="container mt-5">
     <p class="lead">Escribe tu opinion.</p>
     <div class="list-group-item">
 
         <div>
             <form action="">
-
                 <div class="form-group">
                     <label>Nombre</label>
                     <input class="form-control" type="text"  id="nombre" placeholder="nombre_apellido">
@@ -90,7 +98,6 @@
 
                 <div class="panel-body">
                   <label>Puntuación</label>
-
                   <div class="form-group">
                     <div class="puntuacion">
                       <input id="radio1" type="radio" name="estrellas" class= "star" value="5" onclick="document.getElementById('valor').innerHTML=value">
@@ -104,25 +111,32 @@
                       <input id="radio5" type="radio" name="estrellas" class= "star" value="1" onclick="document.getElementById('valor').innerHTML= value">
                       <label for="radio5" class="fa fa-star"></label><br>
                     </div><br>
-
                     <span Style="Display:none" id="valor"></span>
-
                   </div>
               </div>
-              
                 <div class="form-group">
                     <label>Comentario</label>
                     <textarea id="comentario" class="form-control"></textarea></label>
                 </div>
-                
                 <button type="button" class="btn btn-primary" id="agregar">Enviar</button>
-
             </form>
         </div>
-
      </div>
   </div>
+  
 
+  <div class="container">
+    <div class="text-center p-4">
+      <h2>Productos relacionados</h2>
+      <div class="list-group-item">
+        <div class="row text-center text-lg-left pt-2 justify-content-center" id="productImage">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </main>
 
   <footer class="text-muted">
     <div class="container">
@@ -148,6 +162,7 @@
   <script src="js/unlogin.js"></script>
   <script src="js/product-comments.js" ></script>
   <script src="js/comments.js"></script>
+  <script src="js/product-rel.js" ></script>
 
 </body>
 

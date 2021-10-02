@@ -2,6 +2,11 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-    let usuario = JSON.parse(localStorage.getItem("Usuario"));
+    if (JSON.parse(localStorage.getItem("Usuario") == null)) {
+        location.href = "login.html";
+    }
+    else {
+        let usuario = JSON.parse(localStorage.getItem("Usuario"));
     document.getElementById("userLog").innerHTML=usuario.nombre;
+    }
 });
