@@ -55,14 +55,42 @@
         
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="container p-4">
+    <div class="text-center p-4">
+      <h2>Carrito de compras</h2>
     </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 order-md-1">
+        
+        <h4>Artículos a comprar</h4><br>
+      
+        <div id="cartArticles" class="list-group-item">
+
+        </div>
+
+        <br><br>
+        <h4 class="mb-3">Costos</h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Costo de envio</h6>
+                <small class="text-muted">Según el tipo de envio</small>
+              </div>
+              <span class="text-muted" id="">-</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total ($)</span>
+              <strong id="cartTotal">-</strong>
+            </li>
+            </ul>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg" type="submit">Comprar</button>
+        </div>
+      </div>
   </div>
+
+  
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
