@@ -28,6 +28,7 @@
       }
     }
   </style>
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
@@ -55,14 +56,27 @@
         
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+
+
+  <div class="container">
+    <div class="text-center p-4">
+      <h2>Mi perfil</h2>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 order-md-1">
+
+        <div class="row justify-content-md-center" id="elperfil">
+          
+        <div class='col-md-8 order-md-1'><h4>Crear perfil</h4><br><div class='list-group-item'><p>Imagen de perfil:</p><input type='file' id='photo'><p Style='Display:none' id='b64'></p></div><div class='list-group-item'><label> Nombres: <input class='form-control' id='names' type='text'></label><br><br><label> Apellidos: <input class='form-control' id='lastnames' type='text'></label><br><br><label> Edad: <input class='form-control' id='age' type='number'></label><br><br><label> E-mail: <input class='form-control' id='mail' type='email'></label><br><br><label> Teléfono: <input class='form-control' id='phone' type='tel'></label><br><br><span id='msj'></span></div><br><button class='btn btn-primary' type='button' onclick='Verificar()'>Guardar</button><br><br></div>
+
+        </div>
+      </div>
     </div>
   </div>
+
+
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
@@ -87,8 +101,8 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
-  <script src="js/my-profile.js"></script>
   <script src="js/unlogin.js"></script>
+  <script src="js/my-profile.js"></script>
 </body>
 
 </html>

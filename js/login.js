@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
 
 
-document.addEventListener("DOMContentLoaded", function(e){
-
-});
-
 function Verificar() {
     let usuario = document.getElementById('user');
     let contrasena = document.getElementById('password');
@@ -35,7 +31,7 @@ function Verificar() {
         contrasena.classList.add ("Valid");
         
         Usuario.nombre = user.value;
-        Usuario.contrasena = password.value;
+        Usuario.contrasena = md5("password.value");
         Usuario.estado = "Conectado";
 
         mensaje.classList.remove("Invalid");
@@ -47,4 +43,4 @@ function Verificar() {
 
         location.href="index.html";
     }
-}
+};

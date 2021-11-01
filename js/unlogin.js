@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", function(e){
     }
     else {
         let usuario = JSON.parse(localStorage.getItem("Usuario"));
-    document.getElementById("userLog").innerHTML=usuario.nombre;
+        document.getElementById("userLog").innerHTML=usuario.nombre;
     }
 });
