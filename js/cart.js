@@ -3,22 +3,28 @@ const ARTICLES= "https://japdevdep.github.io/ecommerce-api/cart/654.json";
 let precioSubtotal = 0;
 let envioPorcentaje = 15;
 let envioCosto = 0;
-let seleccion = "Tarjeta de crédito";
+let seleccion = "No se ha seleccionado";
 
 
 
 //función que escribe el tipo de pago seleccionado
+//Se activa al clickear Aceptar en el modal
 function tipoPago(){
-    document.getElementById("seleccionado").innerHTML = "<strong>"+ seleccion +"</strong><button type='button' class='m-1 btn btn-link' data-toggle='modal' data-target='#exampleModal'>Cambiar</button>";
-    
+
     let formaPago = document.getElementsByName("formaPago");
     let select = document.getElementById("seleccionado");
 
-    select.classList.remove('is-invalid');
-    select.classList.add('is-valid');
+    //Si se ha seleccionado algún tipo de pago, se muestra la seleccion en negritas
+    if (seleccion !== "No se ha seleccionado"){
+        document.getElementById("seleccionado").innerHTML = "<strong>"+ seleccion +"</strong><button type='button' class='m-1 btn btn-link' data-toggle='modal' data-target='#exampleModal'>Cambiar</button>";
 
-    formaPago[0].value=1;
-    formaPago[1].value=1;
+        select.classList.remove('is-invalid');
+        select.classList.add('is-valid');
+
+        formaPago[0].value=1;
+        formaPago[1].value=1;
+    }
+ 
 };
 
 
@@ -147,13 +153,22 @@ document.addEventListener("DOMContentLoaded", function(e){
         sumarEnvio();
     });
 
-    //Event Listener que cambia la variable seleccion cuando se selecciona un radio del modal.
+    //Event Listeners que cambia la variable seleccion cuando se selecciona un radio del modal
+    //y desactiva la opción contraria.
     document.getElementById("tarjetaradio").addEventListener("change", function(){
         seleccion = "Tarjeta de crédito";
+        document.getElementById("numTarjeta").disabled = false;
+        document.getElementById("codigoSeg").disabled = false;
+        document.getElementById("vencimiento").disabled = false;
+        document.getElementById("numCuenta").disabled = true;
     });
 
     document.getElementById("bancoradio").addEventListener("change", function(){
         seleccion = "Transferencia Bancaria";
+        document.getElementById("numTarjeta").disabled = true;
+        document.getElementById("codigoSeg").disabled = true;
+        document.getElementById("vencimiento").disabled = true;
+        document.getElementById("numCuenta").disabled = false;
     });
 
 

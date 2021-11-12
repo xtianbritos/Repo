@@ -177,15 +177,44 @@
                 </div>
                 <div class="modal-body">
                   
-                  <div class="d-block my-3">
+                  <div class="d-block">
+
                     <div class="custom-control custom-radio">
-                      <input id="tarjetaradio" name="formaPago" type="radio" class="custom-control-input" checked="" value="">
+                      <input id="tarjetaradio" name="formaPago" type="radio" class="custom-control-input"  value="">
                       <label class="custom-control-label" for="tarjetaradio">Tarjeta de crédito</label>
                     </div>
+
+                    <hr class="mb-3">
+
+                    <div class="row m-1">
+                      <div class="col-md-6 mb-3">
+                        <label for="numTarjeta">Número de tarjeta</label>
+                        <input type="text" class="form-control" id="numTarjeta" value="" disabled>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="codigoSeg">Código de seg.</label>
+                        <input type="text" class="form-control" id="codigoSeg" value="" disabled>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="vencimiento">Vencimiento (MM/AA)</label>
+                        <input type="text" class="form-control" id="vencimiento" value="" disabled>
+                        </div>
+                    </div>
+
                     <div class="custom-control custom-radio">
                       <input id="bancoradio" name="formaPago" type="radio" class="custom-control-input" value="">
                       <label class="custom-control-label" for="bancoradio">Transferencia bancaria</label>
                     </div>
+
+                    <hr class="mb-3">
+
+                    <div class="row m-1">
+                      <div class="col-md-6 mb-2">
+                        <label for="numCuenta">Número de cuenta</label>
+                        <input type="text" class="form-control" id="numCuenta" value="" disabled>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>
